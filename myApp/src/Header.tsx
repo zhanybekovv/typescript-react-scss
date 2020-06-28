@@ -22,15 +22,15 @@ function Header() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav col-12">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#">Главная <span className="sr-only">(current)</span></a>
+                                <a className="nav-link" href="/main">Главная <span className="sr-only">(current)</span></a>
                             </li>
                             <li className="vertical ml-3"></li>
                             <li className="nav-item active">
-                                <a className="nav-link ml-3" href="#">О нас <span className="sr-only">(current)</span></a>
+                                <a className="nav-link ml-3" href="/about">О нас <span className="sr-only">(current)</span></a>
                             </li>
                             <li className="vertical ml-3"></li>
                             <li className="nav-item active">
-                                <a className="nav-link ml-3" href="#">Контакты <span className="sr-only">(current)</span></a>
+                                <a className="nav-link ml-3" href="/contacts">Контакты <span className="sr-only">(current)</span></a>
                             </li>
                             <li className="vertical ml-3"></li>
                             <li className="nav-item active">
