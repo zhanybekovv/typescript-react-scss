@@ -16,17 +16,19 @@ import "./App.css"
 
 
 function App() {
-  return (
-    <Router>
-      <div>
-        <Header/>
-        <SideBar/>
-        <Route exact path="/" component={() => (<Redirect to='/main' />)} />
-        <Route exact path="/main" component={MainView} />
-        <Route path="/about" component={About} />
-        <Route path="/contacts" component={Contacts} />
-      </div>
-    </Router>
+  return(
+    <div>
+      <Router>
+        <div style={{marginRight: "20%", marginLeft: "20%"}}>
+          <Header/>
+          <SideBar/>
+          <Route exact path="/" component={() => (<Redirect to='/main' />)} />
+          <Route exact path="/main" component={MainView} />
+          <Route path="/about" component={About} />
+          <Route path="/contacts" component={Contacts} />
+        </div>
+      </Router>
+    </div>
   );
 }
 
