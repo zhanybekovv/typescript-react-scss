@@ -14,8 +14,8 @@ export type Suka={
 function Card(props:Suka) {
   const info:string = props.name! + '\n' + props.email! + '\n' + props.phone!+ '\n';
   return (
-    <div className="d-flex mr-4 mb-4">
-        <div className="border border-dark " style={{height: props.height, width: props.width}}>
+    // <div className=" ">
+        <div className="d-flex mb-4 border border-dark" style={{height: props.height, width: props.width}}>
             {props.logo ? <img src={props.logo} width={props.widthImg} height={props.heightImg}/> : null}
             {props.title}            
             <br/>
@@ -23,7 +23,7 @@ function Card(props:Suka) {
             <br />
             {props.footer}
         </div>
-    </div>
+    // </div>
   );
 }
 

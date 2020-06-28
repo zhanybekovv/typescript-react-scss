@@ -17,8 +17,8 @@ function SideBar(){
         }
     ]);
     return (
-        <div style={{float:"right"}} >
-            {sideCards.map( card => <Card title={card.title} logo={card.logo} footer={card.footer} height="200px" width="160px" heightImg="150px" widthImg="145px" /> )}
+        <div className="mt-4">
+            {sideCards.map( card => <div className =" "><Card title={card.title} logo={card.logo} footer={card.footer} height="200px" width="100%" heightImg="150px" widthImg="145px" /> </div>)}
         </div>
         )
 }
