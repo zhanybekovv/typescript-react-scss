@@ -10,7 +10,9 @@ interface MyCard {
 const MainView:FunctionComponent<MyCard> = props => {
     const [cards, setCards] = useState([{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"}]);
 
-    return <>{cards.map( (card:MyCard) => <Card title={card.title!} /> )}</>
+    return <>
+            {cards.map( (card:MyCard) => <Card title={card.title!} /> )}
+          </>
 }
 
 export default MainView;
