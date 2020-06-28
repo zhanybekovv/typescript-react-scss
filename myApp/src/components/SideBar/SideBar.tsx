@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from './Card';
-import { Car, Assistant } from './static';
+import Card from '../Card/Card';
+import { Car, Assistant } from '../../static/static';
 
 function SideBar(){
     const [sideCards, setSideCards] = useState([
@@ -18,7 +18,7 @@ function SideBar(){
     ]);
     return (
         <div className="mt-4">
-            {sideCards.map( card => <div className =" "><Card title={card.title} logo={card.logo} footer={card.footer} height="200px" width="100%" heightImg="150px" widthImg="145px" /> </div>)}
+            {sideCards.map( card => <div className =" "><Card title={card.title} logo={card.logo} footer={card.footer} height="200px" width="100%" heightImg="150px" widthImg="100%" /> </div>)}
         </div>
         )
 }

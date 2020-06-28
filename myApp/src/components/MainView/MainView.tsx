@@ -1,6 +1,6 @@
 import React, {useState, FunctionComponent} from 'react';
-import Card from './Card'
-import logo from "./bookmarkl.png";
+import Card from '../Card/Card'
+import logo from "../../static/bookmarkl.png";
 import { render } from '@testing-library/react';
 // import './MainView.css';
 
