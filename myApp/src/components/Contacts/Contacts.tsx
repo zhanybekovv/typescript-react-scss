@@ -46,8 +46,8 @@ class Contacts extends React.Component<PeopleState, any> {
                             zipcode = {contacts[id].address.zipcode} 
                             height="200px" 
                             width="100%" 
-                            heightImg="198px" 
-                            widthImg="200px" 
+                            heightImg="100%" 
+                            widthImg="30%" 
                             logo={EmployeeImg} 
                             hr={false}/> 
                         ) }

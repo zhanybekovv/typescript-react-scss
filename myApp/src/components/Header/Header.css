@@ -3,27 +3,59 @@
   float: left;
   border-width: 1.5px;
   border-style: solid;
-  -o-border-image: linear-gradient(to top, #e2e2e2, #4b4a4a, #e2e2e2);
-     border-image: -webkit-gradient(linear, left bottom, left top, from(#e2e2e2), color-stop(#4b4a4a), to(#e2e2e2));
-     border-image: linear-gradient(to top, #e2e2e2, #4b4a4a, #e2e2e2);
+  border-image: linear-gradient(to top, #e2e2e2, #4b4a4a, #e2e2e2);
   border-image-slice: 1;
   border-left: none;
   border-bottom: none;
   border-top: none;
 }
 
-.bg-color {
-  background-color: silver;
-}
-
-.app {
-  margin-top: 100px;
-}
-
 .box {
   width: 8rem;
   height: 8rem;
   background: red;
-  padding-right: 1rem;
 }
+
+.cards {
+  background-color: #e6e6e6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.font {
+  font-size: 200%;
+}
+
+.marginLeft {
+  margin-left: 20px;
+}
+
+@media (max-width: 1149px) {
+  .box {
+    width: 5rem;
+    height: 5rem;
+    background: red;
+  }
+
+  .font {
+    font-size: 100%;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 1086px) {
+  .box {
+    width: 0;
+    height: 0;
+    background: red;
+  }
+
+  .font {
+    font-size: 100%;
+    margin-bottom: 5px;
+  }
+
+  .marginLeft {
+    margin-left: 0px;
+  }
+}
+
 /*# sourceMappingURL=Header.css.map */

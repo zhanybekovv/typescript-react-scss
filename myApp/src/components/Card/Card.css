@@ -1,0 +1,20 @@
+.cards {
+  background-color: #e6e6e6;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.img {
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.footer {
+  color: #e6e6e6;
+  height: 100%;
+}
+
+.cardLine {
+  border-top: 2px solid red;
+}
+
+/*# sourceMappingURL=Card.css.map */

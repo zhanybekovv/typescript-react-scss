@@ -9,13 +9,55 @@
     border-bottom: none;
     border-top: none;
 }
-.bg-color{
-    background-color: silver
-}
-.app{
-    margin-top: 100px;
-}
 
 .box{
-    width:8rem; height:8rem;background:red; padding-right:1rem
+    width:8rem; 
+    height:8rem;
+    background:red; 
+    // padding-right:1rem
 }
+
+$back-color: rgb(230, 230, 230);
+$shadow: 0 0 4px rgba(0,0,0,0.5);
+.cards{
+    background-color: $back-color;
+    box-shadow: $shadow;
+}
+
+.font{
+    font-size: 200%;
+}
+
+.marginLeft{
+    margin-left: 20px;
+}
+
+@media(max-width: 1149px){
+    .box{
+        width:5rem; 
+        height:5rem;
+        background:red; 
+    } 
+    .font{
+        font-size: 100%;
+        margin-bottom: 5px;
+    }
+    
+}
+
+@media(max-width: 1086px){
+    .box{
+        width:0; 
+        height:0;
+        background:red; 
+    } 
+    .font{
+        font-size: 100%;
+        margin-bottom: 5px;
+    }
+    .marginLeft{
+        margin-left: 0px;
+    }
+    // display: inline;
+}
+

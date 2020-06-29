@@ -2,7 +2,7 @@ import React, {useState, FunctionComponent} from 'react';
 import Card from '../Card/Card'
 import logo from "../../static/bookmarkl.png";
 import { render } from '@testing-library/react';
-// import './MainView.css';
+import './MainView.css';
 
 interface MyCard {
     title?: string;
@@ -14,7 +14,7 @@ const MainView:FunctionComponent<MyCard> = props => {
     return (
           <div className="mt-4 row">
               {cards.map( (card:MyCard) => 
-                <div className="col-6">
+                <div className="cardLoc">
                   <Card logo={logo!} 
                     title={card.title!} 
                     hr={true} 

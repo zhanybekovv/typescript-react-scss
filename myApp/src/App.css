@@ -1,1 +1,44 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+.main {
+  background-color: #e6e6e6;
+  padding-top: 5rem;
+}
+
+.center {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.mainView {
+  padding-right: 30px;
+  width: 85%;
+}
+
+.sideView {
+  width: 15%;
+}
+
+@media (max-width: 967px) {
+  .sideView {
+    width: 15%;
+    display: none;
+  }
+
+  .mainView {
+    width: 100%;
+    padding-right: 0px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 600px) {
+  .center {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .main {
+    background-color: #e6e6e6;
+    padding-top: 1px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

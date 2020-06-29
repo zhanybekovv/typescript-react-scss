@@ -1,11 +1,12 @@
 import React from 'react';
 import { YMaps, Map } from 'react-yandex-maps';
 import {Placemark} from 'react-yandex-maps';
+import "./About.css"
 
 const About = () => (
   <YMaps>
     <div className="mt-4">
-      <Map defaultState={{ center: [43.264165, 76.929910], zoom: 12 }} style={{width: "100%", height: "500px"}}>
+      <Map defaultState={{ center: [43.264165, 76.929910], zoom: 12 }} className="map">
         <Placemark 
             geometry={[43.264165, 76.929910]} 
             modules= {

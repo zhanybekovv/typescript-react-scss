@@ -8,11 +8,13 @@ function Header() {
     return (
     // <div className = "d-flex align-items-center flex-column" style={{width: "100%"}}>
     <div className="w-100">
-        <div className="d-flex flex-row align-items-space-around">
-            <div className="box"></div>
-            <div className="d-flex ml-3 flex-column justify-content-end w-100">
-            <h1 className="text-danger">{title}</h1>
-                <nav className="navbar navbar-expand-md navbar-light border border-light rounded" style={{backgroundColor:"rgb(230, 230, 230)", boxShadow: "0 0 4px rgba(0,0,0,0.5)"}}>
+        <div className="d-flex">
+            <div className="d-flex align-items-end">
+                <div className="box"></div>
+            </div>
+            <div className="d-flex flex-column justify-content-end w-100 marginLeft">
+            <p className="text-danger font">{title}</p>
+                <nav className="navbar navbar-expand-lg navbar-light border border-light rounded cards">
                     <button 
                         className="navbar-toggler" 
                         type="button" 

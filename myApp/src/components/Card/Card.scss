@@ -1,0 +1,26 @@
+$back-color: rgb(230, 230, 230);
+$shadow: 0 0 4px rgba(0,0,0,0.5);
+$border: inherit;
+$cover: cover;
+$height: 100%;
+$hr-line: 2px solid red;
+
+
+.cards{
+    background-color: $back-color;
+    box-shadow: $shadow;
+}
+
+.img{
+    border-radius: $border;
+    object-fit: $cover;
+}
+
+.footer{
+    color: $back-color;
+    height: $height;
+}
+
+.cardLine{
+    border-top: $hr-line;
+}

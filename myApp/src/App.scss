@@ -1,0 +1,44 @@
+$bgColor: rgb(230, 230, 230);
+$marginVal: 10%;
+
+.main{
+    background-color: $bgColor;
+    padding-top: 5rem;
+}
+
+.center{
+    margin-right: $marginVal;
+    margin-left: $marginVal
+}
+
+.mainView{
+    padding-right: 30px;
+    width: 85%;
+}
+
+.sideView{
+    width: 15%;
+}
+
+@media(max-width: 967px){
+    .sideView{
+        width: 15%;
+        display: none;
+    }
+    .mainView{
+        width: 100%;
+        padding-right: 0px;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 600px){
+    .center{
+        margin-right: 10px;
+        margin-left: 10px
+    }
+    .main{
+        background-color: $bgColor;
+        padding-top: 1px;
+    }
+}
