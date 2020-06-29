@@ -37,9 +37,21 @@ class Contacts extends React.Component<PeopleState, any> {
     render(){
         const contacts = this.state;
       return (
-        <>
-            { Object.keys(contacts).map( id => <Card name={contacts[id].name!} email={contacts[id].email!} phone={contacts[id].phone!} width="300px" height="450px" logo={EmployeeImg}/> ) }
-        </>
+        <div className="mt-4">
+            { Object.keys(contacts).map( id => 
+                        <Card name={contacts[id].name!} 
+                            email={contacts[id].email!} 
+                            phone={contacts[id].phone!} 
+                            adress={contacts[id].address.street + " " + contacts[id].address.suite + " " + contacts[id].address.city} 
+                            zipcode = {contacts[id].address.zipcode} 
+                            height="200px" 
+                            width="100%" 
+                            heightImg="198px" 
+                            widthImg="200px" 
+                            logo={EmployeeImg} 
+                            hr={false}/> 
+                        ) }
+        </div>
     );
     }
 }

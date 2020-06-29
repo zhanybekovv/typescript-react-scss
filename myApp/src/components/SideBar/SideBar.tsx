@@ -18,7 +18,16 @@ function SideBar(){
     ]);
     return (
         <div className="mt-4">
-            {sideCards.map( card => <div className =" "><Card title={card.title} logo={card.logo} footer={card.footer} height="200px" width="100%" heightImg="150px" widthImg="100%" /> </div>)}
+            {sideCards.map( card => 
+                <Card title={card.title} 
+                    logo={card.logo} 
+                    footer={card.footer} 
+                    height="200px" 
+                    width="100%" 
+                    heightImg="150px" 
+                    widthImg="100%"
+                    hr={false} 
+                />)}
         </div>
         )
 }
