@@ -20,6 +20,7 @@ function App() {
     <div style={{backgroundColor: "rgb(230, 230, 230)", paddingTop: "5rem"}}>
       <Router>
         <div style={{marginRight: "10%", marginLeft: "10%"}}>
+        <hr/>
           <Header/>
           <div className="d-flex flex-row w-100">
             <div className="" style={{paddingRight: "30px", width: "85%"}}>

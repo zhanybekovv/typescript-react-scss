@@ -5,12 +5,12 @@ import './Header.css';
 function Header() {
   return (
     // <div className = "d-flex align-items-center flex-column" style={{width: "100%"}}>
-    <div style={{width: "100%"}}>
+    <div className="w-100">
         <div className="d-flex flex-row align-items-space-around">
             <div className="box"></div>
             <div className="d-flex ml-3 flex-column justify-content-end w-100">
                 <h1 className="text-danger">My Account</h1>
-                <nav className="navbar navbar-expand-md navbar-light bg-color rounded" >
+                <nav className="navbar navbar-expand-md navbar-light border border-light rounded" style={{backgroundColor:"rgb(230, 230, 230)", boxShadow: "0 0 4px rgba(0,0,0,0.5)"}}>
                     <button 
                         className="navbar-toggler" 
                         type="button" 
