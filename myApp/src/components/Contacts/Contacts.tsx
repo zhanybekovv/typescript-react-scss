@@ -40,6 +40,7 @@ const Contacts: React.FC = () => {
       console.log(error);
     }
   };
+  
   useEffect(() => {
     getUser();
   }, []);
