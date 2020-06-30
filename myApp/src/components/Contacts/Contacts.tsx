@@ -1,59 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from '../Card/Card';
-import { EmployeeImg } from '../../static/static';
+import { EmployeeImg } from '../../static';
 
-type PeopleState = {
-    
+type User = {
+    name: string,
+    id: number;
+    username: string;
+    email: string;
+    address:{
+        street: string,
+        suite: string,
+        city: string,
+        zipcode: string,
+        geo: {
+            lat: string,
+            lng: string
+        }
+    },
+    phone: string,
+    website: string,
+    company: {
+      name: string,
+      catchPhrase: string,
+      bs: string
+    }
 }
 
-interface Person {
-    name?: string;
-  }
-  
-class Contacts extends React.Component<PeopleState, any> {
+const Contacts: React.FC = () =>{
 
-    constructor(props: PeopleState){
-        super(props);
-        this.state = {}
-    }
+    const[users, setUsers] = useState<User[]|undefined>()
+
     
-    instance = axios.create({
+    const instance = axios.create({
         withCredentials: true,
         baseURL: "https://jsonplaceholder.typicode.com/users"
     })
 
-    getUser(){
-        this.instance.get("https://jsonplaceholder.typicode.com/users")
-            .then(response => {
-                this.setState(response.data)
-            })
+
+    const getUser = async() => {
+        const res = await instance.get("https://jsonplaceholder.typicode.com/users");
+        setUsers(res.data)
     }
 
-    componentDidMount(){
-        this.getUser()
-    }
+    useEffect(()=>{
+        getUser()
+    },[])
 
-    render(){
-        const contacts = this.state;
-      return (
+    return (
         <div className="mt-4">
-            { Object.keys(contacts).map( id => 
-                        <Card name={contacts[id].name!} 
-                            email={contacts[id].email!} 
-                            phone={contacts[id].phone!} 
-                            adress={contacts[id].address.street + " " + contacts[id].address.suite + " " + contacts[id].address.city} 
-                            zipcode = {contacts[id].address.zipcode} 
-                            height="200px" 
-                            width="100%" 
-                            heightImg="100%" 
-                            widthImg="30%" 
-                            logo={EmployeeImg} 
-                            hr={false}/> 
-                        ) }
+            { users && users.map( (user, i) => {                        
+                    return (
+                        <Card
+                        key = {i}
+                        name={user.name} 
+                        email={user.email} 
+                        phone={user.phone} 
+                        adress={ `${user.address.street} ${user.address.suite} ${user.address.city}`} 
+                        zipcode = {user.address.zipcode} 
+                        height="200px" 
+                        width="100%" 
+                        heightImg="100%" 
+                        widthImg="30%" 
+                        logo={EmployeeImg} 
+                        hr={false}/>
+                            ) 
+                        } 
+                    ) 
+            }
         </div>
     );
-    }
 }
 
 export default Contacts;

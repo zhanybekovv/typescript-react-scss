@@ -10,12 +10,11 @@ import {
   BrowserRouter as Router,
   Route,
   Redirect,
-  RouteComponentProps
 } from "react-router-dom";
 import "./App.css"
 
 
-function App() {
+const App = () => {
   return(
     <div className="main">
       <Router>

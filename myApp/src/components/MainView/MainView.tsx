@@ -1,22 +1,19 @@
-import React, {useState, FunctionComponent} from 'react';
+import React, {useState} from 'react';
 import Card from '../Card/Card'
 import logo from "../../static/bookmarkl.png";
-import { render } from '@testing-library/react';
 import './MainView.css';
 
-interface MyCard {
-    title?: string;
-  }
 
 
-const MainView:FunctionComponent<MyCard> = props => {
-    const [cards, setCards] = useState([{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"},{title:"Hi i am type"}]);
+const MainView:React.FC = () => {
+    const [cards, setCards] = useState([{title:"Мои счета"},{title:"Шаблоны операций"},{title:"Мои счета"},{title:"Шаблоны операций"},{title:"Мои счета"},{title:"Шаблоны операций"}]);
     return (
           <div className="mt-4 row">
-              {cards.map( (card:MyCard) => 
-                <div className="cardLoc">
-                  <Card logo={logo!} 
-                    title={card.title!} 
+              {cards.map( (card, i) => 
+                <div className="cardLoc" key={i}>
+                  <Card 
+                    logo={logo} 
+                    title={card.title} 
                     hr={true} 
                     height="27rem" 
                     width="100%" 

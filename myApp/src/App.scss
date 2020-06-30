@@ -13,16 +13,16 @@ $marginVal: 10%;
 
 .mainView{
     padding-right: 30px;
-    width: 85%;
+    width: 84%;
 }
 
 .sideView{
-    width: 15%;
+    width: 16%;
 }
 
 @media(max-width: 967px){
     .sideView{
-        width: 15%;
+        width: 16%;
         display: none;
     }
     .mainView{

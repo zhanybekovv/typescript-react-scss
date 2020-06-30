@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-function Header() {
+
+const Header = ()=>{
     const [title, setTitle] = useState('Мой аккаунт');
 
     return (
-    // <div className = "d-flex align-items-center flex-column" style={{width: "100%"}}>
     <div className="w-100">
         <div className="d-flex">
             <div className="d-flex align-items-end">
