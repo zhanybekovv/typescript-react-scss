@@ -1,63 +1,60 @@
-.vertical{
-    width: 1px;
-    float: left;
-    border-width: 1.5px;
-    border-style: solid;
-    border-image: linear-gradient(to top, #e2e2e2, #4b4a4a, #e2e2e2);
-    border-image-slice: 1;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
+.vertical {
+  width: 1px;
+  float: left;
+  border-width: 1.5px;
+  border-style: solid;
+  border-image: linear-gradient(to top, #e2e2e2, #4b4a4a, #e2e2e2);
+  border-image-slice: 1;
+  border-left: none;
+  border-bottom: none;
+  border-top: none;
 }
 
-.box{
-    width:8rem; 
-    height:8rem;
-    background:red; 
-    // padding-right:1rem
+.box {
+  width: 8rem;
+  height: 8rem;
+  background: red;
 }
 
 $back-color: rgb(230, 230, 230);
-$shadow: 0 0 4px rgba(0,0,0,0.5);
-.cards{
-    background-color: $back-color;
-    box-shadow: $shadow;
+$shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+.cards {
+  background-color: $back-color;
+  box-shadow: $shadow;
 }
 
-.font{
-    font-size: 200%;
+.font {
+  font-size: 200%;
 }
 
-.marginLeft{
-    margin-left: 20px;
+.marginLeft {
+  margin-left: 20px;
 }
 
-@media(max-width: 1149px){
-    .box{
-        width:5rem; 
-        height:5rem;
-        background:red; 
-    } 
-    .font{
-        font-size: 100%;
-        margin-bottom: 5px;
-    }
-    
+@media (max-width: 1149px) {
+  .box {
+    width: 5rem;
+    height: 5rem;
+    background: red;
+  }
+  .font {
+    font-size: 100%;
+    margin-bottom: 5px;
+  }
 }
 
-@media(max-width: 1086px){
-    .box{
-        width:0; 
-        height:0;
-        background:red; 
-    } 
-    .font{
-        font-size: 100%;
-        margin-bottom: 5px;
-    }
-    .marginLeft{
-        margin-left: 0px;
-    }
-    // display: inline;
+@media (max-width: 1086px) {
+  .box {
+    width: 0;
+    height: 0;
+    background: red;
+  }
+  .font {
+    font-size: 100%;
+    margin-bottom: 5px;
+  }
+  .marginLeft {
+    margin-left: 0px;
+  }
+  // display: inline;
 }
-

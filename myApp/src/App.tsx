@@ -1,41 +1,36 @@
-import React from 'react';
+import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
-import Header from './components/Header/Header';
+import Header from "./components/Header/Header";
 import MainView from "./components/MainView/MainView";
 import SideBar from "./components/SideBar/SideBar";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-} from "react-router-dom";
-import "./App.css"
-
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import "./App.css";
 
 const App = () => {
-  return(
+  return (
     <div className="main">
       <Router>
         <div className="center">
-        <hr/>
-          <Header/>
+          <hr />
+          <Header />
           <div className="d-flex flex-row w-100">
             <div className="mainView">
-              <Route exact path="/" component={() => (<Redirect to='/main' />)} />
+              <Route exact path="/" component={() => <Redirect to="/main" />} />
               <Route exact path="/main" component={MainView} />
               <Route path="/about" component={About} />
               <Route path="/contacts" component={Contacts} />
             </div>
             <div className="sideView">
-              <SideBar/>
+              <SideBar />
             </div>
           </div>
         </div>
       </Router>
     </div>
   );
-}
+};
 
 export default App;
