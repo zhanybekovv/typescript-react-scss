@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import Card from "../Card/Card";
 import { EmployeeImg } from "../../static";
 
@@ -26,11 +27,10 @@ type User = {
     bs: string;
   };
 };
+const url = "https://jsonplaceholder.typicode.com/users";
 
 const Contacts: React.FC = () => {
   const [users, setUsers] = useState<User[] | undefined>();
-
-  const url = "https://jsonplaceholder.typicode.com/users";
 
   const getUser = async () => {
     try {

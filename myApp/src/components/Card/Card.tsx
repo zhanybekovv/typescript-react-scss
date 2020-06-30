@@ -1,9 +1,10 @@
 import React from "react";
+
 import "./Card.css";
 
-export type Info = {
+export type Props = {
   title?: string;
-  logo?: any;
+  logo?: string;
   adress?: string;
   zipcode?: string;
   email?: string;
@@ -16,7 +17,8 @@ export type Info = {
   heightImg?: string;
   widthImg?: string;
 };
-const Card: React.FC<Info> = (props) => {
+
+const Card: React.FC<Props> = (props) => {
   const info = (
     <p>
       {props.name} <br />
@@ -34,6 +36,7 @@ const Card: React.FC<Info> = (props) => {
         >
           {props.logo && (
             <img
+              alt="img"
               src={props.logo}
               width={props.widthImg}
               height={props.heightImg}
@@ -52,6 +55,7 @@ const Card: React.FC<Info> = (props) => {
         >
           {props.logo && (
             <img
+              alt="img"
               src={props.logo}
               width={props.widthImg}
               height={props.heightImg}

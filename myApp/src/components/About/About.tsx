@@ -1,9 +1,10 @@
 import React from "react";
 import { YMaps, Map } from "react-yandex-maps";
 import { Placemark } from "react-yandex-maps";
+
 import "./About.css";
 
-const About = () => (
+const About:React.FC = () => (
   <YMaps>
     <div className="mt-4">
       <Map

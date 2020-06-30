@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+
 import Card from "../Card/Card";
 import logo from "../../static/bookmarkl.png";
 import "./MainView.css";
 
 const MainView: React.FC = () => {
-  const [cards, setCards] = useState([
-    { title: "Мои счета" },
-    { title: "Шаблоны операций" },
-    { title: "Мои счета" },
-    { title: "Шаблоны операций" },
-    { title: "Мои счета" },
-    { title: "Шаблоны операций" },
-  ]);
+  const cards = [
+      { title: "Мои счета" },
+      { title: "Шаблоны операций" },
+      { title: "Мои счета" },
+      { title: "Шаблоны операций" },
+      { title: "Мои счета" },
+      { title: "Шаблоны операций" },
+    ];
   return (
     <div className="mt-4 row">
       {cards.map((card, i) => (
@@ -19,7 +20,7 @@ const MainView: React.FC = () => {
           <Card
             logo={logo}
             title={card.title}
-            hr={true}
+            hr
             height="27rem"
             width="100%"
             heightImg="50px"

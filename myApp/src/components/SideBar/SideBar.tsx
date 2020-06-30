@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+
 import Card from "../Card/Card";
 import { Car, Assistant } from "../../static";
 
-const SideBar = () => {
-  const [sideCards, setSideCards] = useState([
+const SideBar:React.FC = () => {
+   const sideCards = [
     {
       title: "Курс обмена валют:",
     },
@@ -15,7 +16,7 @@ const SideBar = () => {
       logo: Assistant,
       footer: "Депозиты",
     },
-  ]);
+  ];
   return (
     <div className="mt-4">
       {sideCards.map((card, i) => (

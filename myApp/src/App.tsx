@@ -1,4 +1,6 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/bootstrap/dist/js/bootstrap";
 import Header from "./components/Header/Header";
@@ -6,10 +8,9 @@ import MainView from "./components/MainView/MainView";
 import SideBar from "./components/SideBar/SideBar";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "./App.css";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="main">
       <Router>
